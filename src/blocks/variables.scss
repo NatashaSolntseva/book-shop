@@ -1,0 +1,16 @@
+$primaryFont: "Roboto", Arial, sans-serif;
+$primaryFontSize: 32px;
+$secondaryFontSize: 15px;
+
+:root {
+  --var-primary-font-color: #ffffff;
+  --secondary-font-color: #1b3764;
+  --light-font-color: #b4c7e7;
+  --light-logo-font-color: #f5f8fc;
+  --dark-bg-color: #1b3764;
+}
+
+$animationSpeed: all 0.5s ease-in-out;
+
+// Разрешения
+$desktop: 1600px;

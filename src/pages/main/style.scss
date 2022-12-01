@@ -1,1 +1,12 @@
 @import "../../vendor/normalize.css";
+//--+++Переменные+++--
+@import "../../blocks/variables.scss";
+//--+++Миксины+++--
+@import "../../blocks/mixins.scss";
+//--+++Page+++--
+@import "../../blocks/modules/page/page.scss";
+@import "../../blocks/modules/container/container.scss";
+//--+++Header+++--
+@import "../../blocks/modules/header/header.scss";
+//--+++Footer+++--
+@import "../../blocks/modules/footer/footer.scss";
