@@ -1,0 +1,8 @@
+$className: "logo__link";
+
+.#{$className} {
+  display: flex;
+  text-decoration: none;
+  font-family: $primaryFont;
+  color: var(--var-primary-font-color);
+}

@@ -1,0 +1,10 @@
+$className: "book-shelf__container";
+
+.#{$className} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 126px;
+}

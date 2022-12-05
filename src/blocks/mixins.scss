@@ -1,0 +1,10 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font-style($weight: 400, $size: 1rem, $height: 100%) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}

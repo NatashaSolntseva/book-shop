@@ -1,0 +1,7 @@
+$className: "book-shelf__cards-container";
+
+.#{$className} {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

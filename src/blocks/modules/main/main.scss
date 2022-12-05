@@ -1,0 +1,7 @@
+$className: "main";
+
+.#{$className} {
+  background-color: var(--dark-bg-color);
+  display: flex;
+  flex-direction: column;
+}

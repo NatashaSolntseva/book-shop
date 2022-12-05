@@ -1,4 +1,5 @@
 @import "../../vendor/normalize.css";
+@import "../../vendor/fonts.css";
 //--+++Переменные+++--
 @import "../../blocks/variables.scss";
 //--+++Миксины+++--
@@ -6,7 +7,24 @@
 //--+++Page+++--
 @import "../../blocks/modules/page/page.scss";
 @import "../../blocks/modules/container/container.scss";
+@import "../../blocks/modules/section/section.scss";
+@import "../../blocks/modules/main/main.scss";
 //--+++Header+++--
 @import "../../blocks/modules/header/header.scss";
+@import "../../blocks/modules/logo/logo.scss";
+@import "../../blocks/modules/logo/__link/logo__lonk.scss";
+@import "../../blocks/modules/logo/__text/logo__text.scss";
+//--+++Intro+++--
+@import "../../blocks/modules/intro/intro.scss";
+@import "../../blocks/modules/intro/__image/intro__image.scss";
+//--+++Book-Shelf+++--
+@import "../../blocks/modules/book-shelf/book-shelf.scss";
+@import "../../blocks/modules/book-shelf/__title/book-shelf__title.scss";
+@import "../../blocks/modules/book-shelf/__container/book-shelf__container.scss";
+@import "../../blocks/modules/book-shelf/__cards-container/book-shelf__cards-container.scss";
+@import "../../blocks/modules/card/card.scss";
+@import "../../blocks/modules/card/__img/card__img.scss";
+@import "../../blocks/modules/popup/popup.scss";
+@import "../../blocks/modules/popup/_visible/popup_visible.scss";
 //--+++Footer+++--
 @import "../../blocks/modules/footer/footer.scss";

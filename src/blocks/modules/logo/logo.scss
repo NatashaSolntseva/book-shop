@@ -1,0 +1,13 @@
+$className: "logo";
+
+.#{$className} {
+  display: block;
+  cursor: pointer;
+  max-width: fit-content;
+  @include reset();
+  @include font-style($weight: 400, $size: 1.5rem, $height: 120%);
+  &:hover {
+    transition: $animationSpeed;
+    transform: scale(1.05);
+  }
+}

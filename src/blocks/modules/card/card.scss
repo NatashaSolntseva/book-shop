@@ -1,0 +1,13 @@
+$className: "card";
+
+.#{$className} {
+  border: 1px solid var(--dark-bg-color);
+  border-radius: 10px;
+  width: 340px;
+  padding: 15px;
+  box-shadow: 5px 5px 20px rgba(27, 55, 100, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
