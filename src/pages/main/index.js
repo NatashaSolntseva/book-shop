@@ -144,6 +144,13 @@ async function renderCards() {
     const popupText = document.createElement("p");
     popupText.classList.add("popup__text");
     popupText.textContent = item.description;
+    const popupCloseBtnWrapper = document.createElement("div");
+    const popupCloseBtn = document.createElement("button");
+    popupCloseBtn.textContent = "x";
+    popupCloseBtn.addEventListener("click", () => {
+      const popup = document.querySelector(`#popup${i + 1}`);
+      popup.classList.remove("popup_visible");
+    });
 
     const addToBagBtn = document.createElement("button");
     addToBagBtn.classList.add("card__btn");
@@ -158,6 +165,8 @@ async function renderCards() {
     cardInfo.appendChild(btnContainer);
     btnContainer.appendChild(showMoreBtn);
     card.appendChild(popup);
+    popup.appendChild(popupCloseBtnWrapper);
+    popupCloseBtnWrapper.appendChild(popupCloseBtn);
     popup.appendChild(popupText);
     btnContainer.appendChild(addToBagBtn);
 
