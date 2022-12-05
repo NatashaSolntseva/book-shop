@@ -1,0 +1,20 @@
+@import "../../vendor/normalize.css";
+@import "../../vendor/fonts.css";
+//--+++Переменные+++--
+@import "../../blocks/variables.scss";
+//--+++Миксины+++--
+@import "../../blocks/mixins.scss";
+//--+++Page+++--
+@import "../../blocks/modules/page/page.scss";
+@import "../../blocks/modules/container/container.scss";
+@import "../../blocks/modules/section/section.scss";
+@import "../../blocks/modules/main/main.scss";
+//--+++Header+++--
+@import "../../blocks/modules/header/header.scss";
+@import "../../blocks/modules/logo/logo.scss";
+@import "../../blocks/modules/logo/__link/logo__lonk.scss";
+@import "../../blocks/modules/logo/__text/logo__text.scss";
+//--+++Order+++--
+@import "../../blocks/modules/order/order.scss";
+//--+++Footer+++--
+@import "../../blocks/modules/footer/footer.scss";

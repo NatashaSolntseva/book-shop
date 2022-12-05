@@ -296,7 +296,12 @@ function renderCartTotal() {
   const totalAmaunt = document.createElement("div");
   const btnContainer = document.createElement("div");
   const clearCartBtn = document.createElement("button");
+  const orderBtn = document.createElement("a");
+
+  totalAmaunt.classList.add("cart__total-amount");
   clearCartBtn.textContent = "Clear cart";
+  orderBtn.textContent = "Make order";
+  orderBtn.setAttribute("href", "./orderform.html");
 
   clearCartBtn.addEventListener("click", () => {
     console.log("clear the cart");
@@ -305,5 +310,6 @@ function renderCartTotal() {
   documentFragment.appendChild(totalAmaunt);
   documentFragment.appendChild(btnContainer);
   btnContainer.appendChild(clearCartBtn);
+  btnContainer.appendChild(orderBtn);
   cartTolalContainer.appendChild(documentFragment);
 }
