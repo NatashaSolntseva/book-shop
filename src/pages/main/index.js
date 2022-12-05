@@ -71,6 +71,7 @@ const sectionCart = document.createElement("section");
 const cartTitle = document.createElement("h2");
 const cartContainer = document.createElement("div");
 const cartBooksContainer = document.createElement("div");
+const cartTolalContainer = document.createElement("div");
 
 main.classList.add("main");
 // -- sectionIntro
@@ -96,7 +97,7 @@ cartTitle.textContent = "Your Cart";
 cartTitle.classList.add("cart__title");
 cartContainer.classList.add("cart__container");
 cartBooksContainer.classList.add("cart__cards-container");
-
+cartTolalContainer.classList.add("cart__total-container");
 // -- sectionIntro
 main.appendChild(sectionIntro);
 sectionIntro.appendChild(introTextContainer);
@@ -114,6 +115,7 @@ main.appendChild(sectionCart);
 sectionCart.appendChild(cartContainer);
 cartContainer.appendChild(cartTitle);
 cartContainer.appendChild(cartBooksContainer);
+sectionCart.appendChild(cartTolalContainer);
 
 // -- FOOTER
 const footer = document.createElement("footer");
@@ -281,6 +283,27 @@ function renderCart() {
   });
 
   cartBooksContainer.appendChild(documentFragment);
+  renderCartTotal();
 }
 
 renderCart();
+
+function renderCartTotal() {
+  console.log("render total start");
+  const documentFragment = new DocumentFragment();
+
+  const cartTolalContainer = document.querySelector(".cart__total-container");
+  const totalAmaunt = document.createElement("div");
+  const btnContainer = document.createElement("div");
+  const clearCartBtn = document.createElement("button");
+  clearCartBtn.textContent = "Clear cart";
+
+  clearCartBtn.addEventListener("click", () => {
+    console.log("clear the cart");
+  });
+
+  documentFragment.appendChild(totalAmaunt);
+  documentFragment.appendChild(btnContainer);
+  btnContainer.appendChild(clearCartBtn);
+  cartTolalContainer.appendChild(documentFragment);
+}
