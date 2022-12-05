@@ -1,0 +1,8 @@
+$className: "cart__cards-container";
+
+.#{$className} {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}

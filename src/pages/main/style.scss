@@ -26,5 +26,12 @@
 @import "../../blocks/modules/card/__img/card__img.scss";
 @import "../../blocks/modules/popup/popup.scss";
 @import "../../blocks/modules/popup/_visible/popup_visible.scss";
+//--+++Cart+++--
+@import "../../blocks/modules/cart/cart.scss";
+@import "../../blocks/modules/cart/__title/cart__title.scss";
+@import "../../blocks/modules/cart/__container/cart__container.scss";
+@import "../../blocks/modules/cart/__cards-container/cart__cards-container.scss";
+@import "../../blocks/modules/cart/__element/cart__element.scss";
+@import "../../blocks/modules/cart/__img/cart__img.scss";
 //--+++Footer+++--
 @import "../../blocks/modules/footer/footer.scss";

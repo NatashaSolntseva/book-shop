@@ -3,4 +3,12 @@ $className: "header";
 .#{$className} {
   background-color: var(--dark-bg-color);
   min-height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.#{$className} + .main {
+  padding-top: 100px;
 }
