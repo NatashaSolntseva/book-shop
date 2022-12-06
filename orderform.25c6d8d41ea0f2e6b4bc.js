@@ -1,1 +1,0 @@
-(()=>{"use strict";var e=document.getElementById("order-form"),t=JSON.parse(localStorage.getItem("cart"))||[],r=document.getElementById("submit");0===t.length&&r.setAttribute("disabled","true"),function(){var t=e.querySelectorAll(".order__check");function r(t){if(e.querySelectorAll(".order__check:checked").length>=3)return!1}for(var c=0;c<t.length;c++)t[c].onclick=r}()})();
