@@ -39,7 +39,7 @@
                   id="username"
                   name="username"
                   type="text"
-                  minlength="3"
+                  minlength="4"
                   required
                   class="order__input"
                 />
@@ -51,7 +51,7 @@
                   id="usersurname"
                   name="usersurname"
                   type="text"
-                  minlength="3"
+                  minlength="5"
                   required
                   class="order__input"
                 />
@@ -61,16 +61,28 @@
               <legend class="order__legend">Adress</legend>
               <div class="order__field-container">
                 <label for="street" class="order__label">Street</label>
-                <input type="text" id="street" required class="order__input" />
+                <input
+                  type="text"
+                  id="street"
+                  minlength="5"
+                  required
+                  class="order__input"
+                />
               </div>
               <div class="order__field-container">
                 <label for="house" class="order__label">House number</label>
-                <input type="number" id="house" required class="order__input" />
+                <input
+                  type="number"
+                  id="house"
+                  min="1"
+                  required
+                  class="order__input"
+                />
               </div>
               <div class="order__field-container">
                 <label for="flat" class="order__label">Flat number</label>
                 <input
-                  type="number"
+                  type="text"
                   id="flat"
                   min="0"
                   pattern="[0-9]+([-][0-9]+)?"
