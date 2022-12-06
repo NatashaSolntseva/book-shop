@@ -5,3 +5,9 @@ $className: "order__form";
   flex-direction: column;
   align-items: center;
 }
+
+.#{$className}:invalid #submit,
+.#{$className} #submit[disabled]:hover {
+  opacity: 0.5;
+  cursor: default;
+}
