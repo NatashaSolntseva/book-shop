@@ -1,0 +1,19 @@
+$className: "order__radio";
+
+.#{$className} {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid var(--dark-bg-color);
+  transition: 0.2s all linear;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+.#{$className}:checked {
+  border: 6px solid var(--dark-bg-color);
+}

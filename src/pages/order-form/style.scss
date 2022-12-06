@@ -16,5 +16,18 @@
 @import "../../blocks/modules/logo/__text/logo__text.scss";
 //--+++Order+++--
 @import "../../blocks/modules/order/order.scss";
+@import "../../blocks/modules/order/__container/order__container.scss";
+@import "../../blocks/modules/order/__form/order__form.scss";
+@import "../../blocks/modules/order/__title/order__title.scss";
+@import "../../blocks/modules/order/__fieldset/order__fieldset.scss";
+@import "../../blocks/modules/order/__field-container/order__field-container.scss";
+@import "../../blocks/modules/order/__legend/order__legend.scss";
+@import "../../blocks/modules/order/__label/order__label.scss";
+@import "../../blocks/modules/order/__input/order__input.scss";
+@import "../../blocks/modules/order/__radio-conteiner/order__radio-conteiner.scss";
+@import "../../blocks/modules/order/__radio/order__radio.scss";
+@import "../../blocks/modules/order/__check-container/order__check-container.scss";
+@import "../../blocks/modules/order/__check/order__check.scss";
+@import "../../blocks/modules/order/__submit/order__submit.scss";
 //--+++Footer+++--
 @import "../../blocks/modules/footer/footer.scss";

@@ -1,0 +1,10 @@
+$className: "order__title";
+
+.#{$className} {
+  font-family: $primaryFont;
+  color: var(--secondary-font-color);
+  @include reset();
+  @include font-style($weight: 400, $size: 2rem, $height: 120%);
+  padding-bottom: 15px;
+  text-align: center;
+}

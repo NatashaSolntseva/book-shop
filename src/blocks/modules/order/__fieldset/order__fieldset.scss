@@ -1,0 +1,9 @@
+$className: "order__fieldset";
+
+.#{$className} {
+  border: 1px solid var(--dark-bg-color);
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 15px rgba(27, 55, 100, 0.4);
+  border-radius: 5px;
+  min-width: 800px;
+}

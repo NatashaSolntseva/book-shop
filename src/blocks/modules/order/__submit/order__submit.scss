@@ -1,0 +1,19 @@
+$className: "order__submit";
+
+.#{$className} {
+  background-color: var(--dark-bg-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--var-primary-font-color);
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: $primaryFont;
+  @include font-style($weight: 400, $size: 1.5rem, $height: 120%);
+  width: fit-content;
+}
+
+.#{$className}:disabled {
+  background-color: var(--light-font-color);
+  cursor: default;
+}

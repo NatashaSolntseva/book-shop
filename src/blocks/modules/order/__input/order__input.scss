@@ -1,0 +1,8 @@
+$className: "order__input";
+
+.#{$className} {
+  width: 35%;
+  background: var(--light-bg-color);
+  outline: none;
+  border: 1px solid var(--dark-bg-color);
+}

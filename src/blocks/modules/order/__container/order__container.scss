@@ -1,0 +1,13 @@
+$className: "order__container";
+
+.#{$className} {
+  background-color: var(--faccent-bg-color);
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(27, 55, 100, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
