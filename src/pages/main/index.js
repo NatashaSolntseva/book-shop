@@ -9,8 +9,8 @@ import cardDataJSON from "../../utils/data.json";
 console.log("cardDataJSON", cardDataJSON);
 
 let book = null;
-//let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//let cart = [];
 console.log(cart);
 
 //const api = new Api(fetchParams);
