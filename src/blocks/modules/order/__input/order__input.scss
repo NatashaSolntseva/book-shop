@@ -6,3 +6,11 @@ $className: "order__input";
   outline: none;
   border: 1px solid var(--dark-bg-color);
 }
+
+.#{$className}:valid {
+  border: 1px solid green;
+}
+
+.#{$className}:invalid {
+  border: 1px solid red;
+}

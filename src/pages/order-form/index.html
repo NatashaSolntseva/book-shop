@@ -40,6 +40,7 @@
                   name="username"
                   type="text"
                   minlength="4"
+                  placeholder="Name"
                   required
                   class="order__input"
                 />
@@ -52,6 +53,7 @@
                   name="usersurname"
                   type="text"
                   minlength="5"
+                  placeholder="Surname"
                   required
                   class="order__input"
                 />
@@ -65,6 +67,7 @@
                   type="text"
                   id="street"
                   minlength="5"
+                  placeholder="Street"
                   required
                   class="order__input"
                 />
@@ -75,6 +78,7 @@
                   type="number"
                   id="house"
                   min="1"
+                  placeholder="1"
                   required
                   class="order__input"
                 />
@@ -85,6 +89,7 @@
                   type="text"
                   id="flat"
                   min="0"
+                  placeholder="1-2"
                   pattern="[0-9]+([-][0-9]+)?"
                   class="order__input"
                   required
@@ -101,7 +106,12 @@
               </div>
               <div class="order__field-container">
                 <label for="email" class="order__label">E-mail</label>
-                <input type="email" class="order__input" required />
+                <input
+                  type="email"
+                  class="order__input"
+                  placeholder="name@example.com"
+                  required
+                />
               </div>
             </fieldset>
             <fieldset class="order__fieldset">
