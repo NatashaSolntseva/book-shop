@@ -11,12 +11,18 @@
 @import "../../blocks/modules/main/main.scss";
 //--+++Header+++--
 @import "../../blocks/modules/header/header.scss";
+@import "../../blocks/modules/header/__cart-counter/header__cart-counter.scss";
+@import "../../blocks/modules/header/__cart-logo/header__cart-logo.scss";
+@import "../../blocks/modules/header/__cart-wrapper/header__cart-wrapper.scss";
 @import "../../blocks/modules/logo/logo.scss";
 @import "../../blocks/modules/logo/__link/logo__lonk.scss";
 @import "../../blocks/modules/logo/__text/logo__text.scss";
 //--+++Intro+++--
 @import "../../blocks/modules/intro/intro.scss";
 @import "../../blocks/modules/intro/__image/intro__image.scss";
+@import "../../blocks/modules/intro/__subtitle/intro__subtitle.scss";
+@import "../../blocks/modules/intro/__text/intro__text.scss";
+@import "../../blocks/modules/intro/__title/intro__title.scss";
 //--+++Book-Shelf+++--
 @import "../../blocks/modules/book-shelf/book-shelf.scss";
 @import "../../blocks/modules/book-shelf/__title/book-shelf__title.scss";

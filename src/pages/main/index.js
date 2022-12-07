@@ -28,7 +28,9 @@ const renderHeader = () => {
   const logoLink = document.createElement("a");
   const logoImg = document.createElement("img");
   const logoText = document.createElement("p");
+  const cartCounterWrapper = document.createElement("div");
   const cartLogo = document.createElement("img");
+  const cartCounter = document.createElement("span");
 
   header.classList.add("header");
   headerContainer.classList.add("container");
@@ -41,15 +43,22 @@ const renderHeader = () => {
   logoImg.setAttribute("alt", "book logo");
   logoText.classList.add("logo__text");
   logoText.textContent = "Page";
+  cartCounterWrapper.classList.add("header__cart-wrapper");
   cartLogo.setAttribute("src", cartLogoSrc);
   cartLogo.setAttribute("alt", "cart logo");
+  cartLogo.classList.add("header__cart-logo");
+  cartCounter.textContent = "0";
+  cartCounter.classList.add("header__cart-counter");
 
   header.appendChild(headerContainer);
   headerContainer.appendChild(logo);
   logo.appendChild(logoLink);
   logoLink.appendChild(logoImg);
   logoLink.appendChild(logoText);
-  headerContainer.appendChild(cartLogo);
+  headerContainer.appendChild(cartCounterWrapper);
+  cartCounterWrapper.appendChild(cartLogo);
+  cartCounterWrapper.appendChild(cartCounter);
+
   documentFragment.append(header);
 };
 
@@ -79,15 +88,18 @@ sectionIntro.classList.add("section", "intro");
 
 introTextContainer.classList.add("intro-text-container");
 introTitle.textContent = "Welcome to Pages!!!";
-introSubtitle.textContent = "Your Books From The Best Writer.";
+introTitle.classList.add("intro__title");
+introSubtitle.textContent = "Your Books From The Best Writers.";
+introSubtitle.classList.add("intro__subtitle");
 introText.textContent =
   "We believe that reading books are essential to a healthy culture. They’re where authors can connect with readers.";
+introText.classList.add("intro__text");
 introImg.classList.add("intro__image");
 introImg.setAttribute("src", intoImageSrc);
 introImg.setAttribute("alt", "book image");
 // --section Book-Shelf
 sectionBookShelf.classList.add("book-shelf");
-bookShelfTitle.textContent = "The Author’s Book";
+bookShelfTitle.textContent = "Catalogue";
 bookShelfTitle.classList.add("book-shelf__title");
 booksContainer.classList.add("book-shelf__container");
 cardsContainer.classList.add("book-shelf__cards-container");

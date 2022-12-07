@@ -1,0 +1,8 @@
+$className: "intro__text";
+
+.#{$className} {
+  @include reset();
+  font-family: $primaryFont;
+  color: var(--light-font-color);
+  @include font-style($weight: 400, $size: 1rem, $height: 120%);
+}

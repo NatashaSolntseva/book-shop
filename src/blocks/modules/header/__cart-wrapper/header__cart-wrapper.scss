@@ -1,0 +1,11 @@
+$className: "header__cart-wrapper";
+
+.#{$className} {
+  width: 100px;
+  border: 1px solid var(--faccent-bg-color);
+  border-radius: 10px;
+  background-color: var(--faccent-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

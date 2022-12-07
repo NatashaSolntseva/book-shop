@@ -1,0 +1,9 @@
+$className: "intro__title";
+
+.#{$className} {
+  @include reset();
+  font-family: $primaryFont;
+  color: var(--var-primary-font-color);
+  @include font-style($weight: 400, $size: 1.5rem, $height: 120%);
+  padding-bottom: 10px;
+}
