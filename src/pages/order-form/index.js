@@ -25,6 +25,20 @@ function checkboxValidation() {
 
 checkboxValidation();
 
+function dateValidate() {
+  const dateInput = document.getElementById("deliverydate");
+  console.log(dateInput);
+  let today = new Date();
+  let tomorrow = new Date(today.setDate(today.getDate() + 1))
+    .toISOString()
+    .split("T")[0];
+  console.log(tomorrow);
+  dateInput.setAttribute("min", tomorrow);
+  dateInput.setAttribute("value", tomorrow);
+}
+
+dateValidate();
+
 function saveFormData() {
   const username = document.getElementById("username");
   const usersurname = document.getElementById("usersurname");
