@@ -30,8 +30,17 @@
 @import "../../blocks/modules/book-shelf/__cards-container/book-shelf__cards-container.scss";
 @import "../../blocks/modules/card/card.scss";
 @import "../../blocks/modules/card/__img/card__img.scss";
+@import "../../blocks/modules/card/__btn-container/card__btn-container.scss";
+@import "../../blocks/modules/card/__btn/card__btn.scss";
+@import "../../blocks/modules/card/__info/card__info.scss";
+@import "../../blocks/modules/card/__text-author/card__text-author.scss";
+@import "../../blocks/modules/card/__text-title/card__text-title.scss";
+@import "../../blocks/modules/card/__text-price/card__text-price.scss";
 @import "../../blocks/modules/popup/popup.scss";
 @import "../../blocks/modules/popup/_visible/popup_visible.scss";
+@import "../../blocks/modules/popup/__text/popup__text.scss";
+@import "../../blocks/modules/popup/__btn-close/popup__btn-close.scss";
+@import "../../blocks/modules/popup/__btn-close-wrapper/popup__btn-close-wrapper.scss";
 //--+++Cart+++--
 @import "../../blocks/modules/cart/cart.scss";
 @import "../../blocks/modules/cart/__title/cart__title.scss";
@@ -39,5 +48,9 @@
 @import "../../blocks/modules/cart/__cards-container/cart__cards-container.scss";
 @import "../../blocks/modules/cart/__element/cart__element.scss";
 @import "../../blocks/modules/cart/__img/cart__img.scss";
+@import "../../blocks/modules/cart/__total-container/cart__total-container.scss";
+@import "../../blocks/modules/cart/__total-amount/cart__total-amount.scss";
+@import "../../blocks/modules/cart/__btn/cart__btn.scss";
+@import "../../blocks/modules/cart/__btn-container/cart__btn-container.scss";
 //--+++Footer+++--
 @import "../../blocks/modules/footer/footer.scss";

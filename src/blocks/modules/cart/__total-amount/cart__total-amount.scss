@@ -1,0 +1,8 @@
+$className: "cart__total-amount";
+
+.#{$className} {
+  margin-bottom: 30px;
+  font-family: $primaryFont;
+  color: var(--secondary-font-color);
+  @include font-style($weight: 400, $size: 1.5rem, $height: 120%);
+}

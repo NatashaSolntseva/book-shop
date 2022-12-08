@@ -1,0 +1,10 @@
+$className: "card__btn-container";
+
+.#{$className} {
+  display: flex;
+  gap: 30px;
+  align-self: center;
+  width: 80%;
+  justify-content: space-between;
+  padding-top: 20px;
+}

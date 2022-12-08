@@ -1,0 +1,8 @@
+$className: "card__info";
+
+.#{$className} {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-content: space-between;
+}

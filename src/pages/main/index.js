@@ -1,21 +1,12 @@
 import "./style.scss";
-//import Api from "../../components/Api";
-//import { fetchParams } from "../../utils/variables";
+
 import logoImageSrc from "../../images/logo.svg";
 import cartLogoSrc from "../../images/cart.svg";
 import intoImageSrc from "../../images/book-image.png";
+
 import cardDataJSON from "../../utils/data.json";
 
-console.log("cardDataJSON", cardDataJSON);
-
-let book = null;
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-//let cart = [];
-console.log(cart);
-
-//const api = new Api(fetchParams);
-
-//console.log(api);
+let cart = [];
 
 const documentFragment = new DocumentFragment();
 const body = document.querySelector(".page");
@@ -47,7 +38,7 @@ const renderHeader = () => {
   cartLogo.setAttribute("src", cartLogoSrc);
   cartLogo.setAttribute("alt", "cart logo");
   cartLogo.classList.add("header__cart-logo");
-  cartCounter.textContent = "0";
+  cartCounter.textContent = "";
   cartCounter.classList.add("header__cart-counter");
 
   header.appendChild(headerContainer);
@@ -190,8 +181,10 @@ async function renderCards() {
     popupText.classList.add("popup__text");
     popupText.textContent = item.description;
     const popupCloseBtnWrapper = document.createElement("div");
+    popupCloseBtnWrapper.classList.add("popup__btn-close-wrapper");
     const popupCloseBtn = document.createElement("button");
     popupCloseBtn.textContent = "x";
+    popupCloseBtn.classList.add("popup__btn-close");
     popupCloseBtn.addEventListener("click", () => {
       const popup = document.querySelector(`#popup${i + 1}`);
       popup.classList.remove("popup_visible");
@@ -200,18 +193,9 @@ async function renderCards() {
     const addToBagBtn = document.createElement("button");
     addToBagBtn.classList.add("card__btn");
     addToBagBtn.textContent = "Add to cart";
-
-    addToBagBtn.addEventListener("click", () => {
-      console.log("cart add", cart);
-      if (cart.find((el) => el.id === item.id)) {
-        console.log("You have alredy added this book to the cart");
-        return;
-      }
-      cart.push(item);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      console.log(cart);
-      renderCart();
-    });
+    addToBagBtn.onclick = function () {
+      addToCart(item.id);
+    };
 
     card.appendChild(cardImgWrapper);
     cardImgWrapper.appendChild(cardImg);
@@ -235,8 +219,25 @@ async function renderCards() {
 
 renderCards();
 
+function addToCart(id) {
+  if (cart.some((book) => book.id === id)) {
+    alert("You have alredy added this book to the cart");
+  } else {
+    const item = cardDataJSON.find((book) => book.id === id);
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    //console.log("add cart", cart);
+  }
+  updateCart();
+}
+
+function updateCart() {
+  renderCart();
+  renderCartTotal();
+}
+
+// render cart items
 function renderCart() {
-  console.log("start");
   const documentFragment = new DocumentFragment();
   const cartBooksContainer = document.querySelector(".cart__cards-container");
 
@@ -244,6 +245,8 @@ function renderCart() {
     cartBooksContainer.textContent = "Your cart is empty. Add some books";
     return;
   }
+
+  cartBooksContainer.innerHTML = "";
 
   cart.forEach((item) => {
     const cartElement = document.createElement("div");
@@ -280,6 +283,7 @@ function renderCart() {
       cart = cart.filter((el) => el.id !== item.id);
       localStorage.setItem("cart", JSON.stringify(cart));
       console.log("cart after del", cart);
+      renderCartTotal();
     });
 
     cartElement.appendChild(delBtnWrapper);
@@ -295,33 +299,58 @@ function renderCart() {
   });
 
   cartBooksContainer.appendChild(documentFragment);
-  renderCartTotal();
 }
 
-renderCart();
-
 function renderCartTotal() {
-  console.log("render total start");
-  const documentFragment = new DocumentFragment();
+  // console.log("render total start");
+  let totalPrice = 0;
+  let totalItems = cart.length;
 
+  cart.forEach((book) => {
+    totalPrice += book.price;
+  });
+
+  const documentFragment = new DocumentFragment();
   const cartTolalContainer = document.querySelector(".cart__total-container");
+  cartTolalContainer.innerHTML = "";
   const totalAmaunt = document.createElement("div");
   const btnContainer = document.createElement("div");
   const clearCartBtn = document.createElement("button");
-  const orderBtn = document.createElement("a");
+  const orderBtn = document.createElement("button");
+  const orderBtnLink = document.createElement("a");
+  const headerCounter = document.querySelector(".header__cart-counter");
+  headerCounter.textContent = `${cart.length}`;
 
   totalAmaunt.classList.add("cart__total-amount");
+  totalAmaunt.textContent =
+    "Subtotal (" + `${totalItems}` + " items): $" + `${totalPrice}`;
+  btnContainer.classList.add("cart__btn-container");
   clearCartBtn.textContent = "Clear cart";
-  orderBtn.textContent = "Make order";
-  orderBtn.setAttribute("href", "./orderform.html");
+  clearCartBtn.classList.add("cart__btn");
+  orderBtnLink.textContent = "Make order";
+  orderBtn.classList.add("cart__btn");
+  orderBtnLink.setAttribute("href", "./orderform.html");
 
   clearCartBtn.addEventListener("click", () => {
-    console.log("clear the cart");
+    cart = [];
+    headerCounter.textContent = `${cart.length}`;
+    renderCart();
   });
+
+  //TODO doesnt work
+  if (cart.length === 0) {
+    clearCartBtn.setAttribute("disabled", "");
+    orderBtn.setAttribute("disabled", "");
+  }
 
   documentFragment.appendChild(totalAmaunt);
   documentFragment.appendChild(btnContainer);
   btnContainer.appendChild(clearCartBtn);
   btnContainer.appendChild(orderBtn);
+  orderBtn.appendChild(orderBtnLink);
+
   cartTolalContainer.appendChild(documentFragment);
 }
+
+renderCart();
+renderCartTotal();

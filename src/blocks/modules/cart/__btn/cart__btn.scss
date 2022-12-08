@@ -1,0 +1,34 @@
+$className: "cart__btn";
+
+.#{$className} {
+  width: 150px;
+  height: 50px;
+  background: var(--dark-bg-color);
+  color: var(--var-primary-font-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: $primaryFont;
+  @include font-style($weight: 400, $size: 1.5rem, $height: 120%);
+  text-align: center;
+}
+
+.#{$className}:hover {
+  transition: $animationSpeed;
+  background: var(--faccent-bg-color);
+  color: var(--secondary-font-color);
+}
+
+.#{$className} a {
+  text-decoration: none;
+  color: var(--var-primary-font-color);
+}
+.#{$className} a:hover {
+  transition: $animationSpeed;
+  color: var(--secondary-font-color);
+}
+
+.#{$className} [disabled]:hover {
+  opacity: 0.5;
+  cursor: default;
+}

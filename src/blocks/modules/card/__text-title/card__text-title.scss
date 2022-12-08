@@ -1,13 +1,9 @@
-$className: "cart__cards-container";
+$className: "card__text-title";
 
 .#{$className} {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
   font-family: $primaryFont;
   color: var(--secondary-font-color);
   @include reset();
   @include font-style($weight: 400, $size: 1rem, $height: 120%);
-  text-align: center;
+  padding-bottom: 20px;
 }

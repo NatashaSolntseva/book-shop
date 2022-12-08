@@ -1,0 +1,8 @@
+$className: "card__text-price";
+
+.#{$className} {
+  font-family: $primaryFont;
+  color: var(--faccent-bg-color);
+  @include reset();
+  @include font-style($weight: 400, $size: 1.2rem, $height: 120%);
+}
